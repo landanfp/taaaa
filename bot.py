@@ -4,8 +4,7 @@ import time
 
 API_ID = "3335796" 
 API_HASH = "138b992a0e672e8346d8439c3f42ea78"
-BOT_TOKEN = ""
-
+BOT_TOKEN = "5088657122:AAGXARfg6sSX1p1ge876jknkrJizwH959b4"
 # Initialize the bot with your API credentials
 app = Client("my_bot", BOT_TOKEN=BOT_TOKEN, API_ID=API_ID, API_HASH=API_HASH)
 
