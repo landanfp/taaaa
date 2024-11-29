@@ -2,8 +2,12 @@
 from pyrogram import Client, filters
 import time
 
+API_ID = "3335796" 
+API_HASH = "138b992a0e672e8346d8439c3f42ea78"
+BOT_TOKEN = ""
+
 # Initialize the bot with your API credentials
-app = Client("my_bot", bot_token="7136875110:AAF3hNDcTC4X2e9GQ7EePvOST7aTCPh1pGg")
+app = Client("my_bot", BOT_TOKEN=BOT_TOKEN, API_ID=API_ID, API_HASH=API_HASH)
 
 @app.on_message(filters.command("create"))
 async def create_command(client, message):
