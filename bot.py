@@ -2,7 +2,7 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 # Replace with your bot's API token
-API_TOKEN = ""
+API_TOKEN = "7136875110:AAF3hNDcTC4X2e9GQ7EePvOST7aTCPh1pGg"
 API_HASH = "138B992A0E672E8346D8439C3F42EA78"
 API_ID = 3335796
 app = Client("my_bot", bot_token=API_TOKEN, api_id=API_ID, api_hash=API_HASH)
