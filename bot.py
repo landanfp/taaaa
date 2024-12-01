@@ -1,29 +1,26 @@
-
-from pyrogram import Client, filters
+from pyrogram import Client
 import time
 
-API_ID = "3335796" 
-API_HASH = "138b992a0e672e8346d8439c3f42ea78"
-BOT_TOKEN = "5088657122:AAGXARfg6sSX1p1ge876jknkrJizwH959b4"
-# Initialize the bot with your API credentials
-app = Client("my_bot", BOT_TOKEN=BOT_TOKEN, API_ID=API_ID, API_HASH=API_HASH)
+# Replace with your actual API ID and API Hash
+api_id = '3335796'  # Your API ID
+api_hash = '138b992a0e672e8346d8439c3f42ea78'  # Your API Hash
+bot_token = ''
+# Create a Client instance (use your phone number or bot token)
+app = Client("my_bot", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
 
-@app.on_message(filters.command("create"))
-async def create_command(client, message):
-    # Simulate typing indicator
-    await message.reply("Please wait while I create something...")
+# The function that runs the bot
+@app.on_message()
+def handle_message(client, message):
+    # If you want to reply to the message
+    if message.text:
+        # Send typing status to the user
+        message.chat.send_action("typing")
 
-    # Start the typing action (indicating the bot is processing)
-    async with message.chat.typing():
-        # Simulate some time-consuming task, e.g., creating something
-        time.sleep(3)  # You can replace this with any long-running task
+        # Wait for a second to simulate typing
+        time.sleep(2)
 
-    # After the task is done, send a response
-    await message.reply("Creation complete! 🎉")
+        # Reply to the message
+        message.reply("Hello! This is an automated response.")
 
-@app.on_message(filters.command("start"))
-async def start_command(client, message):
-    await message.reply("Welcome! Use /create to trigger the creation process.")
-
-if __name__ == "__main__":
-    app.run()
+# Run the client
+app.run()
