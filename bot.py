@@ -4,7 +4,7 @@ import time
 # Replace with your actual API ID and API Hash
 api_id = '3335796'  # Your API ID
 api_hash = '138b992a0e672e8346d8439c3f42ea78'  # Your API Hash
-bot_token = ''
+bot_token = '5088657122:AAGXARfg6sSX1p1ge876jknkrJizwH959b4'
 # Create a Client instance (use your phone number or bot token)
 app = Client("my_bot", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
 
